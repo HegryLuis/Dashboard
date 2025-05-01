@@ -1,0 +1,90 @@
+.chip-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #0f111a;
+  overflow: hidden;
+  gap: 8px;
+}
+
+.chip-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 8px;
+  padding: 4px 0;
+  scrollbar-width: none;
+}
+.chip-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #141622;
+  border: 1px solid #2e2f3a;
+  border-radius: 999px;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+.chip:hover {
+  transform: scale(1.03);
+}
+.chip-icon {
+  color: #247aff;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.chip-icon img {
+  color: white;
+}
+
+.chip.active {
+  background-color: #247aff;
+  color: white;
+}
+.chip.active .chip-icon {
+  color: white;
+}
+
+.scroll-btn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #2e2f3a;
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(0) invert(1);
+}
+.scroll-btn:hover {
+  color: white;
+}
+
+.scroll-btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
