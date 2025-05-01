@@ -1,5 +1,8 @@
 import "./App.css";
 import Header from "./components/header/Header";
+import MarketIntelligence from "./components/marketIntellegence/MarketIntelligence";
+import PortfolioGoals from "./components/portfolioGoals/PortfolioGoals";
+import QuickActions from "./components/quickActions/QuickActions";
 import ScrollBar from "./components/scrollBar/ScrollBar";
 import WorkQueue from "./components/workQueue/WorkQueue";
 
@@ -12,7 +15,15 @@ function App() {
       <Header username={username} tasksNum={tasksNum} />
       <div className="wrap">
         <ScrollBar />
-        <WorkQueue />
+        <div className="content-wrap">
+          <WorkQueue />
+          <PortfolioGoals />
+
+          <div>
+            <QuickActions />
+            <MarketIntelligence />
+          </div>
+        </div>
       </div>
     </div>
   );

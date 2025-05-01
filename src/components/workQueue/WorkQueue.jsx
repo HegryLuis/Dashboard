@@ -174,8 +174,8 @@ const WorkQueue = () => {
   ]);
 
   return (
-    <div className="queue-main-container">
-      <h1 className="queue-title">Work Queue</h1>
+    <div className="content-main-wrap">
+      <h1 className="content-title">Work Queue</h1>
 
       <div className="queue-bar">
         {workBar.map((chip, index) => {

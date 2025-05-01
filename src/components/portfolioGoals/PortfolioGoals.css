@@ -1,0 +1,9 @@
+.portfolio-content-title {
+  color: #fff;
+  padding: 10px;
+}
+
+.portfolio-content-block {
+  display: flex;
+  flex-direction: column;
+}

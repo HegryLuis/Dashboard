@@ -1,0 +1,25 @@
+.actions-content-wrap {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions-btn {
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #247aff;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 600ms;
+}
+
+.actions-btn:hover {
+  background: #4b93ff;
+}
