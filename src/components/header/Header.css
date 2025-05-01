@@ -1,0 +1,69 @@
+header {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fff;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  color: #fff;
+}
+
+.header-wrap h1 {
+  font-weight: 400;
+}
+
+.header-search-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-search {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: #1e2233;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.header-search::placeholder {
+  color: white;
+}
+
+.header-search::-webkit-input-placeholder {
+  color: white;
+}
+
+.header-search:-moz-placeholder {
+  color: white;
+}
+
+.header-search::-moz-placeholder {
+  color: white;
+}
+
+.header-search:-ms-input-placeholder {
+  color: white;
+}
+
+.search-logo {
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a1f80, #0f58d6); /* синий градиент */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
