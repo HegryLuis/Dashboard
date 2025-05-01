@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import UserAvatar from "../userAvatar/UserAvatar";
 
 const Header = ({ username, tasksNum }) => {
   return (
@@ -16,9 +17,7 @@ const Header = ({ username, tasksNum }) => {
               type="text"
               placeholder="Search..."
             />
-            <div className="search-logo">
-              {username.slice(0, 2).toUpperCase()}
-            </div>
+            <UserAvatar username={username} />
           </div>
         </div>
       </div>

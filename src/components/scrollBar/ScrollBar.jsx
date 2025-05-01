@@ -50,11 +50,11 @@ const ScrollBar = () => {
       </button>
 
       <div className="chip-scroll-container" ref={scrollRef}>
-        {chips.map((chip, idx) => (
+        {chips.map((chip, index) => (
           <div
-            className={`chip fade-in ${activeIndex === idx ? "active" : ""}`}
-            key={idx}
-            onClick={() => setActiveIndex(idx)}
+            className={`chip fade-in ${activeIndex === index ? "active" : ""}`}
+            key={index}
+            onClick={() => setActiveIndex(index)}
           >
             <img className="chip-icon" src={chip.icon} alt="icon" />
             <span className="chip-label">{chip.label}</span>
