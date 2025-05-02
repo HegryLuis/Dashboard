@@ -1,0 +1,90 @@
+.tsb-wrapper {
+  width: 100%;
+  position: relative;
+  font-family: sans-serif;
+  color: white;
+}
+
+.tsb-bar {
+  display: flex;
+  position: relative;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #444;
+}
+
+.tsb-segment {
+  height: 100%;
+}
+
+.tsb-segment.green {
+  background-color: #3dd598;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.tsb-segment.yellow {
+  background-color: #f7c948;
+}
+
+.tsb-segment.red {
+  background-color: #f86c6b;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.tsb-target-pointer {
+  position: absolute;
+  top: -30px;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.tsb-arrow.target {
+  color: #4094f7;
+  font-size: 16px;
+  line-height: 12px;
+}
+
+.tsb-pointer {
+  position: absolute;
+  bottom: -60%;
+  right: 0;
+  transform: translateX(-60%, 0);
+}
+
+.tsb-arrow {
+  font-size: 12px;
+}
+.tsb-arrow.good {
+  color: #3dd598;
+}
+
+.tsb-arrow.bad {
+  color: #f86c6b;
+}
+
+.tsb-value {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.tsb-delta {
+  position: absolute;
+  top: 30px;
+  transform: translateX(-50%);
+  font-size: 12px;
+}
+
+.tsb-delta .good {
+  color: #3dd598;
+}
+
+.tsb-delta .bad {
+  color: #f86c6b;
+}

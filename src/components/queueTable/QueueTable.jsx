@@ -32,7 +32,7 @@ const QueueTable = ({ columns, data, onSort, sortConfig }) => {
                 onClick={() => handleHeaderClick(col)}
                 style={
                   ["Created", "Originator", "Status"].includes(col)
-                    ? { cursor: "pointer" }
+                    ? { cursor: "pointer", color: "#fff" }
                     : {}
                 }
               >
