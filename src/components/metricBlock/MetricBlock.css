@@ -1,0 +1,43 @@
+.metric-wrap {
+  background-color: #151929;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.metric-title {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+.metric-content {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.metric-main {
+  display: block;
+}
+
+.metric-sub {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.metric-link {
+  cursor: pointer;
+  font-size: 14px;
+  color: #4da6ff;
+  text-decoration: none;
+}

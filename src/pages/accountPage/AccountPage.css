@@ -82,3 +82,75 @@
   margin-left: 10px;
   color: yellow;
 }
+
+.right-bottom-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.attention-item {
+  flex: 1;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  border-right: 1px solid #3c3c3c;
+}
+
+.attention-item:last-child {
+  border: none;
+}
+
+.attention-title {
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.attention-subtext {
+  color: #a0a0a0;
+  margin-bottom: 8px;
+}
+
+.attention-link {
+  color: #3da9fc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.attention-link:hover {
+  text-decoration: underline;
+}
+
+.metrics-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.metric-sections {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.distribution-section {
+  width: 30%;
+  color: #fff;
+  background-color: #151929;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.distribution-section h5 {
+  margin-bottom: 10px;
+}
+.distribution-content-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
