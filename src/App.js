@@ -10,7 +10,7 @@ const tasksNum = 12;
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Dashboard">
       <div className="App">
         <Header username={username} tasksNum={tasksNum} />
         <div className="wrap">
@@ -26,16 +26,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <WorkQueue />
-<PortfolioGoals />
-
-<div>
-<QuickActions />
-<MarketIntelligence />
-</div> */
-}
-{
-  /* <MyAccounts /> */
-}
