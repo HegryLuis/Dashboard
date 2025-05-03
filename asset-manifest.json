@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/Dashboard/static/css/main.356341cc.css",
-    "main.js": "/Dashboard/static/js/main.aabd0ce6.js",
+    "main.css": "/Dashboard/static/css/main.86862541.css",
+    "main.js": "/Dashboard/static/js/main.668f58e7.js",
     "index.html": "/Dashboard/index.html",
     "static/media/people_group.svg": "/Dashboard/static/media/people_group.7aac536a67226a72fd08329562083ad4.svg",
+    "static/media/boat.svg": "/Dashboard/static/media/boat.938e8f26e375c6da80f6d0d8ad615907.svg",
     "static/media/database.svg": "/Dashboard/static/media/database.f488a7d89d8fd080b375345ab7cb056e.svg",
     "static/media/target.svg": "/Dashboard/static/media/target.e7ce54bb8375604895327c18a25d6ceb.svg",
+    "static/media/person.svg": "/Dashboard/static/media/person.f14453d7cd87dbe73a5eff7faa7b31ae.svg",
     "static/media/note.svg": "/Dashboard/static/media/note.e78569cfd7474a7e04f6f585df1e83a1.svg",
     "static/media/key.svg": "/Dashboard/static/media/key.60159d0892c6d098bf3d6cfac7d8e1bc.svg",
+    "static/media/check_circle.svg": "/Dashboard/static/media/check_circle.95f14c7a9c117cfef7c7395389abd6bc.svg",
     "static/media/domain.svg": "/Dashboard/static/media/domain.e1e6a0246357f7b2d6ee6e48bff7beb2.svg",
+    "static/media/umbrella.svg": "/Dashboard/static/media/umbrella.b728350b8b77e139d9a2dacf9daa3a62.svg",
+    "static/media/verified.svg": "/Dashboard/static/media/verified.e65fe0490d24b34bc967a7cac4f5acfc.svg",
+    "static/media/factory.svg": "/Dashboard/static/media/factory.fea13e36a70076c58bf465e9a1c67201.svg",
     "static/media/priority.svg": "/Dashboard/static/media/priority.92cc318b9257cc2df3eb2daaba3cd40d.svg",
     "static/media/home.svg": "/Dashboard/static/media/home.119a09aee3765497d20a4a5b3c247f13.svg",
     "static/media/arrow_forward.svg": "/Dashboard/static/media/arrow_forward.db2484fa30832e74436eb866d3e14ebf.svg",
     "static/media/arrow_back.svg": "/Dashboard/static/media/arrow_back.ba11688701665d2ab0ee68611539fd74.svg",
-    "main.356341cc.css.map": "/Dashboard/static/css/main.356341cc.css.map",
-    "main.aabd0ce6.js.map": "/Dashboard/static/js/main.aabd0ce6.js.map"
+    "main.86862541.css.map": "/Dashboard/static/css/main.86862541.css.map",
+    "main.668f58e7.js.map": "/Dashboard/static/js/main.668f58e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.356341cc.css",
-    "static/js/main.aabd0ce6.js"
+    "static/css/main.86862541.css",
+    "static/js/main.668f58e7.js"
   ]
 }
