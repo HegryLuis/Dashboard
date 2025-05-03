@@ -5,6 +5,10 @@
   gap: 10px;
 }
 
+.market-wrap {
+  margin-top: 20px;
+}
+
 .market-chip {
   display: inline-flex;
   align-items: flex-start;

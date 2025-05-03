@@ -18,7 +18,7 @@ const marketData = [
 
 const MarketIntelligence = () => {
   return (
-    <div className="content-main-wrap">
+    <div className="content-main-wrap market-wrap">
       <h1 className="content-title">Market Intelligence</h1>
 
       <div className="market-content-wrap">

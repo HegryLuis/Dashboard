@@ -1,32 +1,41 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Header";
-import MarketIntelligence from "./components/marketIntellegence/MarketIntelligence";
-import PortfolioGoals from "./components/portfolioGoals/PortfolioGoals";
-import QuickActions from "./components/quickActions/QuickActions";
 import ScrollBar from "./components/scrollBar/ScrollBar";
-import WorkQueue from "./components/workQueue/WorkQueue";
+import MainPage from "./pages/MainPage";
+import AccountPage from "./pages/accountPage/AccountPage";
 
 const username = "Arthur";
 const tasksNum = 12;
 
 function App() {
   return (
-    <div className="App">
-      <Header username={username} tasksNum={tasksNum} />
-      <div className="wrap">
-        <ScrollBar />
-        <div className="content-wrap">
-          <WorkQueue />
-          <PortfolioGoals />
-
-          <div>
-            <QuickActions />
-            <MarketIntelligence />
-          </div>
+    <Router>
+      <div className="App">
+        <Header username={username} tasksNum={tasksNum} />
+        <div className="wrap">
+          <ScrollBar />
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/account" element={<AccountPage />} />
+          </Routes>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
 export default App;
+
+{
+  /* <WorkQueue />
+<PortfolioGoals />
+
+<div>
+<QuickActions />
+<MarketIntelligence />
+</div> */
+}
+{
+  /* <MyAccounts /> */
+}

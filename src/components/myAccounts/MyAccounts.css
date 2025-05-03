@@ -1,0 +1,31 @@
+.account-main-wrap {
+  margin-top: 30px;
+}
+.accounts-top-block {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.accounts-search {
+  max-width: 300px;
+  max-height: 30px;
+  padding: 10px;
+}
+
+.accounts-search::placeholder {
+  font-size: 12px;
+}
+
+.btns-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.accounts-chip {
+  color: #247aff;
+  border: 1px solid #247aff;
+  padding: 5px 30px;
+}

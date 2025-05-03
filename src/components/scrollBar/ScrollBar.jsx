@@ -9,30 +9,27 @@ import key from "./../../images/key.svg";
 import note from "./../../images/note.svg";
 import people_group from "./../../images/people_group.svg";
 import target from "./../../images/target.svg";
+import { Link, useLocation } from "react-router-dom";
 
 const chips = [
-  { icon: home, label: "Dashboard" },
-  { icon: database, label: "Accounts" },
-  { icon: people_group, label: "Brokers" },
-  { icon: note, label: "Submission" },
-  { icon: domain, label: "Organization" },
-  { icon: target, label: "Goals & Rules" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
-  { icon: key, label: "Admin" },
+  { icon: home, label: "Dashboard", route: "/" },
+  { icon: database, label: "Accounts", route: "/account" },
+  { icon: people_group, label: "Brokers", route: "/brokers" },
+  { icon: note, label: "Submission", route: "/submission" },
+  { icon: domain, label: "Organization", route: "/organization" },
+  { icon: target, label: "Goals & Rules", route: "/goals" },
+  { icon: key, label: "Admin", route: "/admin" },
+  { icon: key, label: "Admin 2", route: "/admin2" },
+  { icon: key, label: "Admin 4", route: "/admin4" },
+  { icon: key, label: "Admin 5", route: "/admin5" },
+  { icon: key, label: "Admin 6", route: "/admin6" },
+  { icon: key, label: "Admin 7", route: "/admin7" },
+  { icon: key, label: "Admin 8", route: "/admin8" },
 ];
 
 const ScrollBar = () => {
   const scrollRef = useRef();
-  const [activeIndex, setActiveIndex] = useState(0);
+  const location = useLocation();
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -50,16 +47,19 @@ const ScrollBar = () => {
       </button>
 
       <div className="chip-scroll-container" ref={scrollRef}>
-        {chips.map((chip, index) => (
-          <div
-            className={`chip fade-in ${activeIndex === index ? "active" : ""}`}
-            key={index}
-            onClick={() => setActiveIndex(index)}
-          >
-            <img className="chip-icon" src={chip.icon} alt="icon" />
-            <span className="chip-label">{chip.label}</span>
-          </div>
-        ))}
+        {chips.map((chip, index) => {
+          const isActive = location.pathname === chip.route;
+          return (
+            <Link
+              to={chip.route}
+              key={index}
+              className={`chip fade-in ${isActive ? "active" : ""}`}
+            >
+              <img className="chip-icon" src={chip.icon} alt="icon" />
+              <span className="chip-label">{chip.label}</span>
+            </Link>
+          );
+        })}
       </div>
 
       <button className="scroll-btn" onClick={() => scroll("right")}>
