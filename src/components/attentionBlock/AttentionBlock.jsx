@@ -33,7 +33,7 @@ const AttentionBlock = () => {
       <div className="right-bottom-block">
         {attentionData.map((data, index) => {
           return (
-            <div className="attention-item">
+            <div key={index} className="attention-item">
               <div className="attention-title">{data.title}</div>
               <div className="attention-subtext">{data.subtext}</div>
               <a className="attention-link" href="#">

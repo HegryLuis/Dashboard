@@ -1,5 +1,5 @@
 .police-wrap {
-  width: 200px;
+  min-width: 200px;
   padding: 15px 20px;
   border: 1px solid #1c223d;
   border-radius: 20px;

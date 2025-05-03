@@ -10,6 +10,8 @@ import person from "../../images/person.svg";
 import umbrella from "../../images/umbrella.svg";
 import verified from "../../images/verified.svg";
 import PoliceBlock from "../../components/policeBlock/PoliceBlock";
+import check_circle from "../../images/check_circle.svg";
+import ComplianceDocumentation from "../../components/сomplianceDocumentation/ComplianceDocumentation";
 
 const accountInfo = [
   {
@@ -83,13 +85,11 @@ const policiesData = [
     icon: person,
     title: "Workers Comp",
     premium: "75,000",
-    // effDate: "",
   },
   {
     icon: factory,
     title: "Property",
     premium: "64,829.83",
-    // effDate: ""
   },
   {
     icon: umbrella,
@@ -97,6 +97,22 @@ const policiesData = [
     premium: "275,000",
     effDate: "13/03/2026",
   },
+];
+
+const documentationData = [
+  "KYC verification",
+  "Required Documentation",
+  "Regulatory approval",
+  "Financial Verification",
+];
+
+const accountStatusData = [
+  "Submitted",
+  "Review",
+  "Quote",
+  "Bind",
+  "Issue",
+  "Renew",
 ];
 
 const AccountPage = () => {
@@ -149,9 +165,18 @@ const AccountPage = () => {
         <h1>Policies</h1>
         <div className="policies-content">
           {policiesData.map((data, index) => {
-            return <PoliceBlock data={data} />;
+            return <PoliceBlock key={index} data={data} />;
           })}
         </div>
+      </div>
+
+      <div className="status-documentation-wrap">
+        <div className="status-block">
+          <h3 className="status-documentation-title ">Account Status</h3>
+          <div className="status-documentation-content status-content"></div>
+        </div>
+
+        <ComplianceDocumentation />
       </div>
     </div>
   );

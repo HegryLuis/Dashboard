@@ -1,0 +1,26 @@
+.documentation-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.documentation-block {
+  width: 35%;
+}
+
+.documentation-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.documentation-info {
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.documentation-text {
+  font-size: 12px;
+}
