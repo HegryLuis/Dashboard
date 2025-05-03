@@ -4,23 +4,6 @@ import QueueTable from "../queueTable/QueueTable";
 import StatusBadge from "../statusBadge/StatusBadge";
 import UserAvatar from "../userAvatar/UserAvatar";
 
-const workBar = [
-  {
-    title: "Assigned to me",
-    num: 12,
-  },
-  {
-    title: "Pending Review",
-    num: 8,
-  },
-  {
-    title: "Referrals",
-    num: 3,
-  },
-];
-
-const columns = ["Originator", "Client/Line", "Type", "Status", "Created"];
-
 const rawData = [
   {
     originator: "Sam Masters",
@@ -66,13 +49,35 @@ const rawData = [
   },
 ];
 
+const workBar = [
+  {
+    title: "All",
+    num: rawData.length,
+  },
+  {
+    title: "Assigned to me",
+    num: rawData.filter((item) => item.originator === "Me").length,
+  },
+  {
+    title: "Pending Review",
+    num: rawData.filter((item) => item.status === "Pending").length,
+  },
+  {
+    title: "Referrals",
+    num: rawData.filter((item) => item.type === "Underwriter Referral").length,
+  },
+];
+
+const columns = ["Originator", "Client/Line", "Type", "Status", "Created"];
+
 const WorkQueue = () => {
   const [barActiveIndex, setBarActiveIndex] = useState(0);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
-  const [data, setData] = useState(rawData);
+  // const [data, setData] = useState(rawData);
+  const [filteredData, setFilteredData] = useState(rawData);
 
   const sortData = (key) => {
-    let sortedData = [...data];
+    let sortedData = [...filteredData];
 
     const direction =
       sortConfig.key === key && sortConfig.direction === "asc" ? "desc" : "asc";
@@ -95,10 +100,36 @@ const WorkQueue = () => {
 
     setSortConfig({ key, direction });
 
-    setData(sortedData);
+    setFilteredData(sortedData);
   };
 
-  const tableData = data.map((row) => [
+  const handleBarClick = (index) => {
+    setBarActiveIndex(index);
+
+    let newData;
+    switch (index) {
+      case 0: // All
+        newData = rawData;
+        break;
+      case 1: // Assigned to me
+        newData = rawData.filter((item) => item.originator === "Me");
+        break;
+      case 2: // Pending Review
+        newData = rawData.filter((item) => item.status === "Pending");
+        break;
+      case 3: // Referrals
+        newData = rawData.filter(
+          (item) => item.type === "Underwriter Referral"
+        );
+        break;
+      default:
+        newData = rawData;
+    }
+
+    setFilteredData(newData);
+  };
+
+  const tableData = filteredData.map((row) => [
     <div className="originator-block">
       <UserAvatar username={row.originator} />
       {row.originator}
@@ -121,7 +152,7 @@ const WorkQueue = () => {
                 barActiveIndex === index ? "active" : ""
               }`}
               key={index}
-              onClick={() => setBarActiveIndex(index)}
+              onClick={() => handleBarClick(index)}
             >
               <span className="queue-chip-label">{`${chip.title}(${chip.num}) `}</span>
             </div>
