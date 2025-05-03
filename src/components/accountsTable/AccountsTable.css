@@ -102,3 +102,25 @@
   font-size: 0.85em;
   color: #ccc;
 }
+
+@media (max-width: 768px) {
+  .btns-wrap {
+    flex-direction: column-reverse;
+  }
+
+  .accounts-search {
+    max-height: 40px;
+  }
+
+  .accounts-chip {
+    width: 150px;
+    justify-content: center;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .accounts-search {
+    width: 200px;
+  }
+}

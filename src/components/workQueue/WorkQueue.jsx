@@ -73,7 +73,6 @@ const columns = ["Originator", "Client/Line", "Type", "Status", "Created"];
 const WorkQueue = () => {
   const [barActiveIndex, setBarActiveIndex] = useState(0);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
-  // const [data, setData] = useState(rawData);
   const [filteredData, setFilteredData] = useState(rawData);
 
   const sortData = (key) => {

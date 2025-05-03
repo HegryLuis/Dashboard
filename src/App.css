@@ -31,3 +31,112 @@
   background: #2e2f3a;
   padding: 20px;
 }
+
+.main-page-blocks-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+/* Common media */
+
+@media (max-width: 1440px) {
+  .main-page-content-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-page-blocks-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .blocks-inner-wrap {
+    width: 40%;
+  }
+
+  .portfolio-main-wrap {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-wrap {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .accounts-top-block {
+    max-width: 100% !important;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .accounts-top-block .content-title {
+    font-size: 26px;
+  }
+
+  .accounts-search {
+    max-height: 40px;
+    max-width: 300px;
+    width: 300px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-wrap h1 {
+    font-size: 22px;
+  }
+
+  .queue-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .queue-chip {
+    width: 200px;
+    justify-content: center;
+  }
+
+  .content-title {
+    font-size: 16px;
+  }
+
+  .market-chip {
+    font-size: 14px;
+  }
+
+  .actions-btn {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-wrap h1 {
+    font-size: 16px;
+  }
+
+  .avatar-logo {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-page-blocks-wrapper {
+    flex-direction: column;
+  }
+
+  .portfolio-main-wrap {
+    width: 100%;
+  }
+
+  .blocks-inner-wrap {
+    width: 100%;
+  }
+
+  .chip-wrapper {
+    padding: 10px 0;
+  }
+}

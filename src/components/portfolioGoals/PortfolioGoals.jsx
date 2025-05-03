@@ -5,7 +5,7 @@ import LinearProgressBar from "../linearProgressBar/LinearProgressBar";
 
 const PortfolioGoals = () => {
   return (
-    <div className="content-main-wrap">
+    <div className="content-main-wrap portfolio-main-wrap">
       <h1 className="content-title">Portfolio Goals</h1>
 
       <div className="portfolio-content-block">

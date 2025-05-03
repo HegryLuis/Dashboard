@@ -8,13 +8,15 @@ import MyAccounts from "../components/myAccounts/MyAccounts";
 const MainPage = () => {
   return (
     <>
-      <div className="content-wrap">
+      <div className="content-wrap main-page-content-wrap">
         <WorkQueue />
-        <PortfolioGoals />
+        <div className="main-page-blocks-wrapper">
+          <PortfolioGoals />
 
-        <div>
-          <QuickActions />
-          <MarketIntelligence />
+          <div className="blocks-inner-wrap">
+            <QuickActions />
+            <MarketIntelligence />
+          </div>
         </div>
       </div>
 
