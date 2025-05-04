@@ -10,11 +10,13 @@ import person from "../../images/person.svg";
 import umbrella from "../../images/umbrella.svg";
 import verified from "../../images/verified.svg";
 import PoliceBlock from "../../components/policeBlock/PoliceBlock";
-import check_circle from "../../images/check_circle.svg";
 import ComplianceDocumentation from "../../components/сomplianceDocumentation/ComplianceDocumentation";
 import AccountStatusBlock from "../../components/accountStatusBlock/AccountStatusBlock";
 import SidebarMenu from "../../components/sideBarMenu/SideBarMenu";
 import HistoricalTrendBlock from "../../components/historicalTrendBlock/HistoricalTrendBlock";
+import IncreasingWinnabilityBlock from "../../components/winnability/IncreasingWinnabilityBlock";
+import DecreasingWinnabilityBlock from "../../components/winnability/DecreasingWinnabilityBlock";
+import rocket from "./../../images/rocket.svg";
 
 const accountInfo = [
   {
@@ -124,9 +126,20 @@ const detailsMetricData = {
   subContentDot: "••••",
 };
 
+const dataAI = [
+  {
+    title: "Offer 5% premium discount in exchange for 3-year commitment",
+    text: "Historical win rate increases 24% with multi-year commitments. Current pricing is 12% above market average. This approach would strengthen retention while maintaining adequate profitability.",
+  },
+  {
+    title: "Propose risk control services for cargo handling procedures",
+    text: "Can potentially reduce loss ratio 15-20% based on similar maritime accounts in your portfolio. Specific focus on loading/unloading operations would address the most frequent claim scenarios",
+  },
+];
+
 const AccountPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
-  const [selectedItem, setSelectedItem] = useState("Winnability"); // default
+  const [selectedItem, setSelectedItem] = useState("Winnability");
 
   const handleItemSelect = (item) => {
     setSelectedItem(item);
@@ -219,6 +232,48 @@ const AccountPage = () => {
                 })}
               </div>
             </div>
+
+            <div className="details-block-middle">
+              <div style={{ display: "flex", gap: "20px" }}>
+                <IncreasingWinnabilityBlock />
+                <DecreasingWinnabilityBlock />
+              </div>
+            </div>
+
+            <div className="details-block-bottom">
+              <div className="details-bottom-title">
+                <img alt="rocket" src={rocket} />
+                <span>AI-Powered Recommendation</span>
+              </div>
+
+              <div className="details-bottom-text-box">
+                {dataAI.map((data, index) => {
+                  return (
+                    <div key={index} className="bottom-box">
+                      <div className="bottom-box-text">
+                        <h4>{data.title}</h4>
+                        <span>{data.text}</span>
+                      </div>
+                      <button className="details-btn">Apply</button>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="communication-wrap">
+        <h2>Communication</h2>
+
+        <div className="communication-block">
+          <div className="communication-top">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="communication-search header-search"
+            />
           </div>
         </div>
       </div>

@@ -180,6 +180,28 @@
   border-radius: 4px;
 }
 
+.winnability-block {
+  background-color: #0f172a;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.winnability-title {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.green-title {
+  color: #22c55e;
+}
+
+.yellow-title {
+  color: #facc15;
+}
+
 /*  */
 
 .status-documentation-wrap {
@@ -228,6 +250,9 @@
 .details-main-block-wrap {
   padding: 20px 30px;
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .details-block-top {
@@ -247,6 +272,62 @@
 
 .details-position-block .metrics-wrap {
   color: beige;
+}
+
+.details-block-bottom {
+  background-color: #0f172a;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.details-bottom-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bottom-box {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-bottom-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bottom-box-text {
+  width: 70%;
+}
+
+.bottom-box-text span {
+  font-size: 14px;
+}
+
+.details-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  color: black;
+  background: #22c55e;
+  border: none;
+  transition: 600ms;
+}
+
+.details-btn:hover {
+  background: #16a34a;
+}
+
+/*  */
+
+.communication-wrap {
+  margin-top: 20px;
+  color: #fff;
 }
 
 /* Media */

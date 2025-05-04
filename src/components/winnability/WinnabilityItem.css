@@ -1,0 +1,66 @@
+.winnability-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.winnability-index {
+  width: 24px;
+  height: auto;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+  background: #1e293b;
+  color: white;
+}
+
+.winnability-index.positive {
+  /* background: linear-gradient(to right, #22c55e, #16a34a); */
+  border: 1px solid #22c55e;
+}
+
+.winnability-index.negative {
+  /* background: linear-gradient(to right, #facc15, #f59e0b); */
+  border: 1px solid #facc15;
+}
+
+.winnability-content {
+  flex: 1;
+}
+
+.winnability-label {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.winnability-bar-wrapper {
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.winnability-bar.green {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(to right, #0f172a, #16a34a);
+  height: 100%;
+}
+
+.winnability-bar.yellow {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: linear-gradient(to right, #0f172a, #f59e0b);
+  height: 100%;
+}
+
+.winnability-value {
+  width: 50px;
+  text-align: right;
+  color: #ccc;
+  font-size: 14px;
+  margin-left: 10px;
+}
