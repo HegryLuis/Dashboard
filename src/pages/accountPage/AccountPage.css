@@ -162,13 +162,13 @@
 
 .policies-content {
   display: flex;
-  gap: 20px; /* заменили space-between */
+  gap: 20px;
   overflow-x: auto;
   background-color: #151929;
   border-radius: 20px;
   padding: 20px;
   scrollbar-width: thin;
-  flex-wrap: nowrap; /* не даём элементам переноситься */
+  flex-wrap: nowrap;
 }
 
 .policies-content::-webkit-scrollbar {
@@ -205,6 +205,51 @@
   border-radius: 20px;
 }
 
+.account-details-wrap {
+  margin-top: 50px;
+  color: #fff;
+}
+
+/* * * * * * * * * * * * * * * * * * *  */
+
+.details-main-wrap {
+  display: flex;
+  padding: 30px;
+  background: #151929;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.details-sidebar-wrap {
+  width: 30%;
+  border-right: 2px dashed #fff;
+}
+
+.details-main-block-wrap {
+  padding: 20px 30px;
+  width: 70%;
+}
+
+.details-block-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-position-block {
+  background-color: #0e1122 !important;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.distribution-content-wrap {
+  padding: 20px;
+}
+
+.details-position-block .metrics-wrap {
+  color: beige;
+}
+
+/* Media */
 @media (max-width: 1024px) {
   .header-account-wrap {
     flex-direction: column-reverse;
@@ -237,7 +282,7 @@
 
 @media (max-width: 768px) {
   .metric-sections {
-    width: 50%;
+    width: auto;
     flex-direction: column;
   }
 

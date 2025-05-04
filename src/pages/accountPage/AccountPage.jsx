@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AccountPage.css";
 import database from "./../../images/database.svg";
 import AttentionBlock from "../../components/attentionBlock/AttentionBlock";
@@ -12,6 +12,9 @@ import verified from "../../images/verified.svg";
 import PoliceBlock from "../../components/policeBlock/PoliceBlock";
 import check_circle from "../../images/check_circle.svg";
 import ComplianceDocumentation from "../../components/сomplianceDocumentation/ComplianceDocumentation";
+import AccountStatusBlock from "../../components/accountStatusBlock/AccountStatusBlock";
+import SidebarMenu from "../../components/sideBarMenu/SideBarMenu";
+import HistoricalTrendBlock from "../../components/historicalTrendBlock/HistoricalTrendBlock";
 
 const accountInfo = [
   {
@@ -99,23 +102,40 @@ const policiesData = [
   },
 ];
 
-const documentationData = [
-  "KYC verification",
-  "Required Documentation",
-  "Regulatory approval",
-  "Financial Verification",
+const detailsPositionData = [
+  {
+    title: "Your score",
+    percent: 82,
+  },
+  {
+    title: "Market Avg",
+    percent: 68,
+  },
+  {
+    title: "Top competitor",
+    percent: 88,
+  },
 ];
 
-const accountStatusData = [
-  "Submitted",
-  "Review",
-  "Quote",
-  "Bind",
-  "Issue",
-  "Renew",
-];
+const detailsMetricData = {
+  title: "Overall Score",
+  content: "82%",
+  status: "Very Strong",
+  subContentDot: "••••",
+};
 
 const AccountPage = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+  const [selectedItem, setSelectedItem] = useState("Winnability"); // default
+
+  const handleItemSelect = (item) => {
+    setSelectedItem(item);
+  };
+
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div>
       <div className="header-account-wrap">
@@ -171,12 +191,36 @@ const AccountPage = () => {
       </div>
 
       <div className="status-documentation-wrap">
-        <div className="status-block">
-          <h3 className="status-documentation-title ">Account Status</h3>
-          <div className="status-documentation-content status-content"></div>
-        </div>
-
+        <AccountStatusBlock />
         <ComplianceDocumentation />
+      </div>
+
+      <div className="account-details-wrap">
+        <h1>Account Details</h1>
+
+        <div className="details-main-wrap">
+          <div className="details-sidebar-wrap">
+            <SidebarMenu onItemSelect={handleItemSelect} />
+          </div>
+
+          <div className="details-main-block-wrap">
+            <h1 className="details-main-title">{selectedItem}</h1>
+
+            <div className="details-block-top">
+              <div className="details-position-block">
+                <MetricBlock data={detailsMetricData} changeBackground={true} />
+              </div>
+              <div className="details-position-block">
+                <HistoricalTrendBlock />
+              </div>
+              <div className="details-position-block distribution-content-wrap">
+                {detailsPositionData.map((data, index) => {
+                  return <DistributionBlock key={index} data={data} />;
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
