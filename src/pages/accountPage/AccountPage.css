@@ -330,6 +330,45 @@
   color: #fff;
 }
 
+.communication-block {
+  padding: 30px;
+  background: #151929;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.search-block-top {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.input-search {
+  padding: 8px 16px;
+  max-width: 200px;
+}
+
+.search-btns-wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.search-btn {
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: 1px solid #3da9fc;
+  color: #3da9fc;
+  background: #151929;
+}
+
+.comment-main-wrap {
+  display: grid;
+  grid-template-columns: repeat(2fr, 1);
+}
+
 /* Media */
 @media (max-width: 1024px) {
   .header-account-wrap {

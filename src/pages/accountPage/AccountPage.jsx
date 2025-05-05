@@ -17,6 +17,7 @@ import HistoricalTrendBlock from "../../components/historicalTrendBlock/Historic
 import IncreasingWinnabilityBlock from "../../components/winnability/IncreasingWinnabilityBlock";
 import DecreasingWinnabilityBlock from "../../components/winnability/DecreasingWinnabilityBlock";
 import rocket from "./../../images/rocket.svg";
+import CommunicationBlock from "../../components/communicationBlock/CommunicationBlock";
 
 const accountInfo = [
   {
@@ -268,13 +269,20 @@ const AccountPage = () => {
         <h2>Communication</h2>
 
         <div className="communication-block">
-          <div className="communication-top">
+          <div className="search-block-top">
             <input
               type="text"
               placeholder="Search..."
-              className="communication-search header-search"
+              className="input-search header-search"
             />
+
+            <div className="search-btns-wrap">
+              <button className="search-btn">Filter</button>
+              <button className="search-btn">Group</button>
+            </div>
           </div>
+
+          <CommunicationBlock />
         </div>
       </div>
     </div>
