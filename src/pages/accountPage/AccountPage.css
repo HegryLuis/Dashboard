@@ -369,6 +369,19 @@
   grid-template-columns: repeat(2fr, 1);
 }
 
+.policies-table-wrap {
+  color: #fff;
+  margin-top: 20px;
+  /* padding-bottom: 30px; */
+}
+
+.policies-table-block {
+  padding: 30px;
+  background: #151929;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
 /* Media */
 @media (max-width: 1024px) {
   .header-account-wrap {

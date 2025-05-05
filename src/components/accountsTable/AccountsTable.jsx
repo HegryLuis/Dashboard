@@ -133,27 +133,3 @@ const AccountsTable = ({ columns, data, onSort, sortConfig }) => {
 };
 
 export default AccountsTable;
-
-{
-  /* <tbody>
-  {data.map((row, idx) => (
-    <tr key={idx}>
-      {columns.map((col, cellIdx) => {
-        const key = columnKeyMap[col];
-        if (Array.isArray(key)) {
-          return (
-            <td key={cellIdx}>
-              <div>{row[key[0]]}</div>
-              <div style={{ color: "#888", fontSize: "0.85em" }}>
-                {row[key[1]]}
-              </div>
-            </td>
-          );
-        }
-        return <td key={cellIdx}>{row[key]}</td>;
-      })}
-    </tr>
-  ))}
-
-</tbody> */
-}
