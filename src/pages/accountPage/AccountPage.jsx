@@ -236,7 +236,7 @@ const AccountPage = () => {
             </div>
 
             <div className="details-block-middle">
-              <div style={{ display: "flex", gap: "20px" }}>
+              <div className="details-block-middle-wrap">
                 <IncreasingWinnabilityBlock />
                 <DecreasingWinnabilityBlock />
               </div>

@@ -73,3 +73,9 @@
 .reply-btn:hover {
   background: #2a73ab;
 }
+
+@media (max-width: 768px) {
+  .communication-main-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

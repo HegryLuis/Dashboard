@@ -11,6 +11,14 @@
   color: #fff;
 }
 
+.custom-table tbody tr:nth-child(even) {
+  background-color: #151929;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #1e2233;
+}
+
 .custom-table th {
   color: #aaa;
   padding: 10px;

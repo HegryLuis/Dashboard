@@ -3,7 +3,6 @@
   border-radius: 20px;
   padding: 20px;
   flex: 1;
-  min-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,4 +56,11 @@
   font-size: 14px;
   color: #4da6ff;
   text-decoration: none;
+}
+
+@media (max-width: 425px) {
+  .metric-content.flex {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

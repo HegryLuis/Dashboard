@@ -23,19 +23,19 @@
 }
 
 .line-logo.blue {
-  background: blue;
+  background: #1a3fff;
 }
 
 .line-logo.green {
-  background: green;
+  background: #4caf50;
 }
 
 .line-logo.purple {
-  background: purple;
+  background: rgb(146, 8, 146);
 }
 
 .line-logo.red {
-  background: red;
+  background: #f86c6b;
 }
 
 .line-code {
@@ -65,6 +65,28 @@
 
 .status-dot.gray {
   background-color: #9e9e9e;
+}
+
+.rate-change.red {
+  color: #f86c6b;
+}
+
+.loss-ratio span {
+  color: #000;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.loss-ratio.green span {
+  background: #4caf50;
+}
+
+.loss-ratio.yellow span {
+  background: #ffc107;
+}
+
+.loss-ratio.red span {
+  background: #f86c6b;
 }
 
 @keyframes blink {

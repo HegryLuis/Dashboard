@@ -225,9 +225,32 @@ const PoliciesTable = () => {
                   return <td key={cellIdx}>Pending</td>;
                 }
 
-                if (["rate change", "loss ratio"].includes(col)) {
+                if (col === "rate change") {
                   if (isPending) return <td key={cellIdx}>N/A</td>;
-                  return <td key={cellIdx}>{formatPercent(value)}</td>;
+
+                  const isOverTech = value > 5 ? "red" : "";
+
+                  return (
+                    <td key={cellIdx} className={`rate-change ${isOverTech}`}>
+                      {formatPercent(value)}
+                    </td>
+                  );
+                }
+
+                if (col === "loss ratio") {
+                  if (isPending) return <td key={cellIdx}>N/A</td>;
+
+                  const backgroundRatio =
+                    value <= 50 ? "green" : value <= 70 ? "yellow" : "red";
+
+                  return (
+                    <td
+                      key={cellIdx}
+                      className={`loss-ratio ${backgroundRatio}`}
+                    >
+                      <span>{formatPercent(value)}</span>
+                    </td>
+                  );
                 }
 
                 if (numericFields.includes(col)) {
