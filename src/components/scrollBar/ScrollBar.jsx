@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import "./ScrollBar.css";
-import arrow_back from "./../../images/arrow_back.svg";
 import arrow_forward from "./../../images/arrow_forward.svg";
 import database from "./../../images/database.svg";
 import domain from "./../../images/domain.svg";
@@ -10,7 +9,6 @@ import note from "./../../images/note.svg";
 import people_group from "./../../images/people_group.svg";
 import target from "./../../images/target.svg";
 import { Link, useLocation } from "react-router-dom";
-import arrow_back_2 from "./../../images/arrow_back_2.svg";
 
 const chips = [
   { icon: home, label: "Dashboard", route: "/" },
