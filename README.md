@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# Dashboard created by React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This 2-pages Front-end site created by React and CSS, using React-router to movement between pages. Also this site has adaptive and that means this site can be opened in phones.
 
-## Available Scripts
+## Open web-site by link using GitHub Pages
 
-In the project directory, you can run:
+https://HegryLuis.github.io/Dashboard
 
-### `npm start`
+## Downloading and setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Clone repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git clone https://github.com/HegryLuis/Dashboard
 
-### `npm test`
+### 2. Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install
 
-### `npm run build`
+### 3. Launch locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Pages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### MainPage.jsx
 
-### `npm run eject`
+This page contains 5 components(WorkQueue, PortfolioGoals, QuickActions, MarketIntelligence, MyAccounts)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### AccountPage.jsx
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This page contains 7 components (AccountHeader, MetricSection, PoliciesCardSection, StatusAndDocsSection, AccountDetailsSection, CommunicationSection, PoliciesTableSection)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Components
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### AccountsTable
 
-## Learn More
+This component contains the table which returns in MyAccounts component. This component accepts columns and data for creating table.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### AccountStatusBlock
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This component represents progression of account. Used in dashboards or account detail views to show the current phase of a user or business process in a clear, linear way
 
-### Code Splitting
+### AttentionBlock
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This component highlights important account alerts that require user attention. It displays a list of items with a title, subtext, and a link to more details, helping users quickly identify and act on priority issues.
 
-### Analyzing the Bundle Size
+### CommentBlock
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The CommentBlock component displays a single comment with optional metadata and attachments. It shows the comment type, title, author, date, main content, and—if available—an attachment section with a reply button.
 
-### Making a Progressive Web App
+### CommunicationBlock
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This component requires 4 comment blocks and using as wrapper for comments block
 
-### Advanced Configuration
+### DistributionBlock
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Visually represents a percentage value using a horizontal progress bar.
 
-### Deployment
+### Header
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Displays a personalized greeting with the user's name and the number of open tasks. It also includes a search input field and a user avatar
 
-### `npm run build` fails to minify
+### HistoricalTrendBlock
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Visually displays a simple historical trend line using SVG
+
+### LinearProgressBar
+
+Visually displays progress bar. It shows the current value as a filled portion of the bar and the percentage completed.
+
+### MarketIntelligence
+
+This component displays a list of key market insights as colored chips. Each chip consists of a dot
+
+### MetricBlock
+
+Component displays a single metric item, including a title, main value, status, and optional sub-content or link.
+
+### MyAccounts
+
+displays a list of accounts with a search input and a set of buttons for different actions. The component also renders an AccountsTable component described above
+
+### PoliceBlock
+
+Displays a block of information related to a police item
+
+### PoliciesTable
+
+This component represents a table with policy data.This table also includes features like sorting the table by column headers (e.g., line, status, rate change) and formatting the numeric values (e.g., currency and percentage)
+
+### PortfolioGoals
+
+Displays several portfolio-related goals and their progress using visual components like TargetStatusBar and LinearProgressBar
+
+### QueueTable
+
+Component which returns a table designed to display data with sortable columns. Also has a features like sorting the table by created date, name and status
+
+### QuickActions
+
+Component is a simple UI component that displays a set of predefined action buttons.
+
+### ScrollBar
+
+Component is a horizontally scrollable list of navigation buttons that users can click for navigating between pages.
+
+### SideBarMenu
+
+This component is designed to display a sidebar with collapsible categories, each containing a list of items.
+
+### StatusBadge
+
+Simple UI element that visually indicates the status of an item
+
+### TargetStatusBar
+
+This component visually represent a progress bar with a target value, current value, and status indicators like good/bad based on delta
+
+### UserAvatar
+
+Simple UI element for creating an avatar based on a user's name by displaying their initials
+
+### WinnabilityItem
+
+Component is designed to display an item with a progress bar
+
+### IncreasingWinnabilityBlock
+
+Designed to display a list of factors that increase winnability, each represented by a WinnabilityItem
+
+### DecreasingWinnabilityBlock
+
+Designed to display a list of factors that decrease winnability, represented by WinnabilityItem components
+
+### WorkQueue
+
+Provides an interactive and dynamic table view for displaying work queue data, with sorting and filtering capabilities
+
+### ComplianceDocumentation
+
+Returns a list of compliance-related documentation items and allows users to view the current status with a simple "check" indicator

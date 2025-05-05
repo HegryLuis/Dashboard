@@ -1,4 +1,3 @@
-// components/complianceDocumentation/ComplianceDocumentation.jsx
 import React from "react";
 import "./ComplianceDocumentation.css";
 import check_circle from "../../images/check_circle.svg";

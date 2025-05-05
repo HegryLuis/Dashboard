@@ -56,24 +56,3 @@ const PortfolioGoals = () => {
 };
 
 export default PortfolioGoals;
-
-// const targetStatusData = [
-//   {title: "PORTFOLIO LOSS RATIO TARGET",
-//     value: "48.2",
-//     target: "55",
-//     range: { min: 0, max: 100 },
-//     segments={[
-//       { color: "green", until: 55 },
-//       { color: "yellow", until: 65 },
-//       { color: "red", until: 100 },
-//     ]},
-//     delta: ""
-//   },
-//   {title: "RENEWAL RETENTION",
-//     value: "",
-//     target: "85-90%",
-//     range: "",
-//     statusLabel: "",
-//     delta: ""
-//   },
-// ]

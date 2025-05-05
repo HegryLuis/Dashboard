@@ -15,7 +15,7 @@ const columnKeyMap = {
   Winnability: "winnability",
 };
 
-const AccountsTable = ({ columns, data, onSort, sortConfig }) => {
+const AccountsTable = ({ columns, data }) => {
   const getRatioColor = (ratio) => {
     const num = parseInt(ratio);
     if (num < 30) return "green";
@@ -46,10 +46,7 @@ const AccountsTable = ({ columns, data, onSort, sortConfig }) => {
         <thead>
           <tr>
             {columns.map((col, idx) => (
-              <th key={idx}>
-                {col}
-                {/* {getSortArrow(col)} */}
-              </th>
+              <th key={idx}>{col}</th>
             ))}
           </tr>
         </thead>

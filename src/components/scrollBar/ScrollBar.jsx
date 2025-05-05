@@ -10,6 +10,7 @@ import note from "./../../images/note.svg";
 import people_group from "./../../images/people_group.svg";
 import target from "./../../images/target.svg";
 import { Link, useLocation } from "react-router-dom";
+import arrow_back_2 from "./../../images/arrow_back_2.svg";
 
 const chips = [
   { icon: home, label: "Dashboard", route: "/" },
@@ -43,7 +44,7 @@ const ScrollBar = () => {
   return (
     <div className="chip-wrapper">
       <button className="scroll-btn" onClick={() => scroll("left")}>
-        <img src={arrow_back} alt="back" />
+        <img src={arrow_forward} alt="back" className={`arrow back`} />
       </button>
 
       <div className="chip-scroll-container" ref={scrollRef}>
@@ -63,7 +64,7 @@ const ScrollBar = () => {
       </div>
 
       <button className="scroll-btn" onClick={() => scroll("right")}>
-        <img src={arrow_forward} alt="forward" />
+        <img className="arrow" src={arrow_forward} alt="forward" />
       </button>
     </div>
   );
